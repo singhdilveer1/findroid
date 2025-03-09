@@ -10,10 +10,9 @@ android {
     namespace = "dev.jdtech.jellyfin.data"
     compileSdk = Versions.compileSdk
     buildToolsVersion = Versions.buildTools
-    lintOptions {
-        disable("MissingTranslation", "ExtraTranslation", "MissingColor")
+    lint {
+        disable += listOf("MissingTranslation", "ExtraTranslation", "MissingColor")
     }
-}
     defaultConfig {
         minSdk = Versions.minSdk
 

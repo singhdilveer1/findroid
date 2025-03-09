@@ -19,5 +19,9 @@
         <item name="chipMinTouchTargetSize">20dp</item>
         <item name="chipStrokeWidth">0dp</item>
     </style>
+<style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+    <!-- Replace colorControlNormal with transparent_black_300 -->
+    <item name="colorControlNormal">@color/transparent_black_300</item>
+</style>
 
 </resources>

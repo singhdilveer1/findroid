@@ -44,4 +44,5 @@
 
     <color name="logo_primary">#FF3DDC84</color>
     <color name="logo_secondary">#FF00A4DC</color>
+    <color name="tint_color">#FF5722</color> <!-- Light color -->
 </resources>

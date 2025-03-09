@@ -35,8 +35,11 @@ jobs:
           fileName: 'findroid-keystore.jks'
           encodedString: ${{ secrets.FINDROID_KEYSTORE }}
 
-      - name: Build APKs
+      - name: Build and sign phone APKs
         run: ./gradlew assembleRelease
+
+      - name: Build and sign TV APKs
+        run: ./gradlew :tv:assembleRelease
 
       - name: Create release
         uses: softprops/action-gh-release@v2
@@ -47,3 +50,7 @@ jobs:
             ./app/phone/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-armeabi-v7a.apk
             ./app/phone/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-x86_64.apk
             ./app/phone/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-x86.apk
+            ./app/tv/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-arm64-v8a.apk
+            ./app/tv/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-armeabi-v7a.apk
+            ./app/tv/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-x86_64.apk
+            ./app/tv/build/outputs/apk/libre/release/findroid-${{ github.ref_name }}-libre-x86.apk

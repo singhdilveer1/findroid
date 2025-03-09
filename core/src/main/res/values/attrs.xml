@@ -1,0 +1,3 @@
+<declare-styleable name="CustomDrawable">
+    <attr name="customTint" format="color" />
+</declare-styleable>

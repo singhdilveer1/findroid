@@ -3,7 +3,7 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24"
-
+>
     <path
         android:pathData="M12 15l3.5-3.5"
         android:strokeLineJoin="round"
